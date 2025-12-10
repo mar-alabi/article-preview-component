@@ -15,9 +15,28 @@
 body {
   font-family: "Manrope", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  font-size: 13px;
+  color: var(--darkgrayishblue);
+  background-color: var(--light-grayish-blue);
 }
 
+.container {
+  max-width: 1000px;
+  width: 80%;
+  background-color: white;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.image {
+  margin: -1.5rem; /* negative margin cancels the padding */
+  margin-bottom: 0;
+}
+.image img {
+  width: 100%;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
