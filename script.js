@@ -4,5 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   shareButton.addEventListener("click", () => {
     userProfile.classList.toggle("active");
+    userProfile.textContent = ""
   });
 });
