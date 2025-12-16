@@ -44,8 +44,43 @@ h2 {
 }
 
 .content {
-  padding: 2.25rem 2rem;
+  padding: 2.25rem 2rem 1.25rem 2rem;
 }
+
+.writer {
+  display: flex;
+  gap: 1rem;
+}
+.writer-avatar img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.share-btn {
+  background-color: var(--light-grayish-blue);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  width: 32px;
+  height: 32px;
+  margin-left: 5rem;
+}
+
+.share-btn img {
+  width: 15px;
+  height: 13px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
