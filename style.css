@@ -177,3 +177,87 @@ h2 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image {
+    flex: 0 0 285px;
+  }
+
+  .image img {
+    width: 285px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .content {
+    padding: 2rem 2.5rem 0 2.5rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .content p {
+    margin-top: 1rem;
+  }
+
+  .user-profile {
+    padding: 1.25rem 2.5rem 2rem 2.5rem;
+  }
+
+  /* Desktop share panel - appears as tooltip above button */
+  .share-panel {
+    display: none;
+    position: absolute;
+    bottom: auto;
+    top: auto;
+    right: -68px;
+    left: auto;
+    transform: translateY(-80px);
+    width: 248px;
+    background-color: var(--darkgrayishblue);
+    padding: 1.125rem 2.25rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Tooltip arrow */
+  .share-panel::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--darkgrayishblue);
+  }
+
+  /* Desktop active state */
+  .user-profile.active .share-panel {
+    display: flex;
+  }
+
+  .user-profile.active .user {
+    visibility: visible;
+  }
+
+  .user-profile.active .share-btn {
+    background-color: var(--desaturated-dark-blue);
+  }
+
+  .user-profile.active .share-btn img {
+    filter: brightness(0) invert(1);
+  }
+}
