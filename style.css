@@ -1,4 +1,4 @@
-/* Declare Color variables  */
+/* Declare Color variables */
 :root {
   --darkgrayishblue: hsl(217, 19%, 35%);
   --desaturated-dark-blue: hsl(214, 17%, 51%);
@@ -19,6 +19,11 @@ body {
   font-size: 13px;
   color: var(--darkgrayishblue);
   background-color: var(--light-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -104,6 +109,7 @@ h2 {
   transition: background-color 0.3s;
   width: 32px;
   height: 32px;
+  flex-shrink: 0;
 }
 
 .share-btn img {
@@ -183,20 +189,29 @@ h2 {
   .container {
     max-width: 730px;
     display: flex;
-    flex-direction: row;
+    overflow: visible;
   }
 
   .image {
     flex: 0 0 285px;
-  }
-
-  .image img {
-    width: 285px;
-    height: 100%;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: 10px 0 0 10px;
   }
 
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: visible;
+    border-radius: 0 10px 10px 0;
+  }
   .content {
     padding: 2rem 2.5rem 0 2.5rem;
   }
@@ -212,17 +227,16 @@ h2 {
 
   .user-profile {
     padding: 1.25rem 2.5rem 2rem 2.5rem;
+    margin-top: auto;
   }
 
   /* Desktop share panel - appears as tooltip above button */
   .share-panel {
     display: none;
     position: absolute;
-    bottom: auto;
-    top: auto;
-    right: -68px;
+    bottom: 90px;
+    right: -65px;
     left: auto;
-    transform: translateY(-80px);
     width: 248px;
     background-color: var(--darkgrayishblue);
     padding: 1.125rem 2.25rem;
